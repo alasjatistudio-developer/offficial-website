@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alas Jati Studio | Premium Android App Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0F172A', /* Background Utama */
+                        secondary: '#1E293B', /* Card & Section */
+                        accent: '#D4AF37', /* Warna Emas */
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 25px -5px rgba(212, 175, 55, 0.1), 0 10px 10px -5px rgba(212, 175, 55, 0.04);
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-dark text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-2xl font-bold text-white">Alas Jati <span class="text-accent">Studio</span></h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-white hover:text-accent transition-colors px-3 py-2 text-sm font-medium">Beranda</a>
+                        <a href="#about" class="text-gray-300 hover:text-accent transition-colors px-3 py-2 text-sm font-medium">Tentang</a>
+                        <a href="#services" class="text-gray-300 hover:text-accent transition-colors px-3 py-2 text-sm font-medium">Layanan</a>
+                        <a href="#portfolio" class="text-gray-300 hover:text-accent transition-colors px-3 py-2 text-sm font-medium">Portofolio</a>
+                        <a href="#contact" class="bg-accent text-dark px-5 py-2 rounded-full text-sm font-bold hover:bg-white transition-all">Hubungi Kami</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070')] bg-cover bg-center opacity-10"></div>
+        <div class="absolute top-1/3 left-1/4 w-72 h-72 bg-accent/20 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div>
+        <div class="absolute top-2/3 right-1/4 w-72 h-72 bg-blue-500/20 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16">
+            <div class="text-center">
+                <h2 class="text-accent font-semibold tracking-widest uppercase mb-4">Android Developer Expert</h2>
+                <h1 class="text-[clamp(2.5rem,5vw,5rem)] font-bold leading-tight mb-6">
+                    Mewujudkan Ide Menjadi <br>
+                    <span class="bg-gradient-to-r from-accent to-yellow-200 text-gradient">Aplikasi Premium</span>
+                </h1>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-10">
+                    Kami mengembangkan aplikasi Android yang tidak hanya cepat dan stabil, tetapi juga memiliki tampilan yang elegan, modern, dan berkelas dunia.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-accent text-dark px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 hover:scale-105 transition-all">
+                        Mulai Proyek <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#portfolio" class="border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:border-accent hover:text-accent transition-all">
+                        Lihat Portofolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-secondary/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-accent font-semibold tracking-widest uppercase">Siapa Kami</h2>
+                <h3 class="text-4xl font-bold mt-2">Keahlian & Dedikasi</h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h4 class="text-2xl font-semibold mb-4">Alas Jati Studio</h4>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Berdiri dengan visi menjadi mitra teknologi terpercaya, kami fokus pada pembuatan aplikasi mobile berkualitas tinggi. Kami memahami bahwa aplikasi bisnis Anda harus mencerminkan profesionalisme perusahaan Anda.
+                    </p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Dengan standar koding yang rapi, arsitektur yang kuat, dan desain UI/UX yang memukau, kami memastikan produk yang Anda dapatkan adalah aset digital yang bernilai tinggi.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div class="p-4 bg-dark rounded-xl">
+                            <h5 class="text-3xl font-bold text-accent">50+</h5>
+                            <p class="text-sm text-gray-400">Proyek Selesai</p>
+                        </div>
+                        <div class="p-4 bg-dark rounded-xl">
+                            <h5 class="text-3xl font-bold text-accent">100%</h5>
+                            <p class="text-sm text-gray-400">Client Happy</p>
+                        </div>
+                        <div class="p-4 bg-dark rounded-xl">
+                            <h5 class="text-3xl font-bold text-accent">5+</h5>
+                            <p class="text-sm text-gray-400">Tahun Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-accent to-amber-600 rounded-2xl blur opacity-30"></div>
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974" alt="Developer Working" class="relative rounded-2xl w-full h-auto object-cover shadow-2xl border border-white/10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-accent font-semibold tracking-widest uppercase">Apa yang Kami Lakukan</h2>
+                <h3 class="text-4xl font-bold mt-2">Layanan Unggulan</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-secondary p-8 rounded-2xl border border-white/10 card-hover">
+                    <div class="w-14 h-14 bg-accent/10 text-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa fa-android"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Android App Development</h4>
+                    <p class="text-gray-400">Pembuatan aplikasi native menggunakan Kotlin & Java dengan performa tinggi dan stabilitas yang teruji.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-secondary p-8 rounded-2xl border border-white/10 card-hover">
+                    <div class="w-14 h-14 bg-accent/10 text-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa fa-paint-brush"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">UI/UX Design Premium</h4>
+                    <p class="text-gray-400">Desain antarmuka yang modern, elegan, dan intuitif mengikuti standar Material Design terbaru.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-secondary p-8 rounded-2xl border border-white/10 card-hover">
+                    <div class="w-14 h-14 bg-accent/10 text-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa fa-server"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Backend & API</h4>
+                    <p class="text-gray-400">Pembuatan sistem database dan layanan web yang aman, cepat, dan siap untuk skala bisnis besar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-secondary/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-accent font-semibold tracking-widest uppercase">Hasil Kerja</h2>
+                <h3 class="text-4xl font-bold mt-2">Portofolio Kami</h3>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/10 h-80 bg-secondary">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Project">
+                    <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                        <span class="text-accent text-sm font-medium">Aplikasi E-Commerce</span>
+                        <h4 class="text-xl font-bold text-white">ShopLux App</h4>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/10 h-80 bg-secondary">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Project">
+                    <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                        <span class="text-accent text-sm font-medium">Sistem Manajemen</span>
+                        <h4 class="text-xl font-bold text-white">BizPro Dashboard</h4>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/10 h-80 bg-secondary">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Project">
+                    <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                        <span class="text-accent text-sm font-medium">Aplikasi Keuangan</span>
+                        <h4 class="text-xl font-bold text-white">MoneyWise</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-accent/10"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl font-bold mb-4">Siap Membuat Aplikasi Anda?</h2>
+            <p class="text-gray-300 mb-8">Konsultasikan kebutuhan aplikasi Android Anda bersama kami. Kami siap membantu dari nol hingga aplikasi tayang di Play Store.</p>
+            <a href="#contact" class="inline-block bg-accent text-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all">
+                Konsultasi Gratis <i class="fa fa-whatsapp ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-secondary">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-accent font-semibold tracking-widest uppercase">Hubungi Kami</h2>
+                <h3 class="text-4
+
